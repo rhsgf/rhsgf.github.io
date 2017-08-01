@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>gittest</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		#bg{
+			width: 950px;
+			margin: 0 auto;
+		}
+		input{
+			height: 35px;
+			padding: 5px 5px;
+			outline: none;
+			background: palevioletred;
+			border: 0;
+			border-radius: 10px;
+			color: white;
+			font-size: 20px;
+			display: block;
+			margin: 20px auto;
+		}
+		.word{
+			line-height: 30px;
+			color: palevioletred;
+			font-weight: bold;
+			font-size: 20px;
+			display: none;
+		}
+		span{
+			color: mediumpurple;
+		}
+	</style>
+</head>
+<body>	
+	<div id="bg">
+		<input type="button" value="创建git库" class="ip"/>
+		<div class="word">
+			1.创建git库<br>
+			wujiayi:~ lanou3g$ <span>cd desktop</span>  //进入桌面<br>
+			wujiayi:desktop lanou3g$ <span>cd git</span>  //进入新建git<br>
+			wujiayi:git lanou3g$ <span>git init</span>  //初始化git库<br>
+			wujiayi:git lanou3g$ <span>git config --global user.name "wujiayi"</span>  //设置git库的名字<br>
+			wujiayi:git lanou3g$ <span>git config --global user.email "wujiayi6874@163.com"</span>  //设置git库的邮箱<br>
+			wujiayi:git lanou3g$ <span>touch index.html</span>  //在git库中新建index.html<br>
+			wujiayi:git lanou3g$ <span>git add .</span>  //添加git库下所有文件<br>				  
+			wujiayi:git lanou3g$ <span>git commit -m "text"</span>  //上传到git库<br>
+			wujiayi:git lanou3g$ <span>git diff</span>  //查看修改内容<br>   
+			wujiayi:git lanou3g$ <span>git add .</span>  //修改后再添加<br>
+			wujiayi:git lanou3g$ <span>git commit -m "text"</span>  //修改后再上传
+		</div>
+		<input type="button" value="新建分支及合并" class="ip"/>
+		<div class="word">
+			2.新建分支及合并<br>
+			wujiayi:git lanou3g$ <span>git branch</span>  //查看当前分支<br>
+			wujiayi:git lanou3g$ <span>git branch css</span>  //新建名为css的分支<br>
+			wujiayi:git lanou3g$ <span>git branch</span>  //查看当前分支是否添加成功新分支<br>
+			wujiayi:git lanou3g$ <span>git checkout css</span>  //切换到css分支<br>
+			wujiayi:git lanou3g$ <span>cd css</span>  //进入css分支<br>
+			wujiayi:git lanou3g$ <span>mkdir dir1</span>  //在css分支新建dir1文件夹<br>
+			wujiayi:git lanou3g$ <span>cd dir1</span>  //进入dir1文件夹<br>
+			wujiayi:dir1 lanou3g$ <span>touch test.html</span>  //在dir1文件夹新建test.html<br>
+			wujiayi:dir1 lanou3g$ <span>git add .</span>  //添加dir1下所有文件<br>
+			wujiayi:dir1 lanou3g$ <span>git commit -m "添加"</span>  //上传dir1下所有文件到git库<br>
+			wujiayi:dir1 lanou3g$ <span>cd ../</span>  //返回dir1的上一级<br>
+			wujiayi:git lanou3g$ <span>git checkout master</span>  //切换到master主线<br>
+			wujiayi:git lanou3g$ <span>git merge css</span>  //合并css分支到master主线上
+		</div>
+		<input type="button" value="上传GitHub" class="ip"/>
+		<div class="word">
+			3.上传GitHub<br>
+			先新建一个repository，名为gittest<span>（名字随意，最好英文）</span><br>
+			wujiayi:git lanou3g$ <span>git remote add origin https://github.com/rhsgf/gittest.git</span>  //复制<br> 
+			wujiayi:git lanou3g$ <span>git push -u origin master</span>  //复制<br>
+			后刷新GitHub即可。<span>当修改添加新内容上传到git库后，</span>直接输入：<br>
+			wujiayi:git lanou3g$ <span>git push master</span>  上传修改后内容到GitHub<br>
+		</div>
+		<input type="button" value="通过虚拟服务器上传GitHub" class="ip"/>
+		<div class="word">
+			4.通过github.io虚拟服务器上传到GitHub<br> 
+			先新建一个repository，<span>名为rhsgf.github.io（GitHub名字.github.io）</span><br>
+			通过GitHub Desktop程序点击<span>Clone a Repository</span><br>
+			复制GitHub新建页面中<span>https://github.com/rhsgf/rhsgf.github.io.git</span>到URL，点击Clone<br>
+			进入点击<span>open this repository，</span>把名为rhsgf.github.io的<span>文件夹拖到编辑器中</span><br>
+			内容修改增删后，返回GitHub Desktop程序<br>
+			<span>在Summary处写此次修改之后的项目名字</span>，Description处写描述（可不写），点击Commit to master<br>
+			点击上方<span>Push origin，</span>后点击<span>Fetch origin，</span>上传成功后刷新GitHub即可
+		</div>
+		<input type="button" value="补充内容" class="ip"/>
+		<div class="word">
+			1.ls  //查看当前所在的路径 可以查看到<span>当前目录下的所有文件及文件夹</span><br>
+			2.rm -r   //删除<br>
+			3.open  //打开文件或文件夹<br>
+			4.clear  //清屏 把上面<span>所有内容推上去</span><br>
+			5.defaults write com.apple.finder AppleShowAllFiles YES<br>
+			6.pwd  //显示<span>当前所在目录</span><br>
+			7.git status  //查看git库的状态，文件是否提交等<br>
+			8.git log  //查看修改记录<br>
+			9.git reset --hard <span>版本号</span>  //回退版本<br>
+			10.git add <file>   //添加文件<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git add 具体文件名 //表示添加<span>某一个具体的文件</span><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git add  *.html //表示添加<span>后缀为.html的所有文件</span><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;git add . //表示添加<span>所有的文件</span><br>
+			11.git  commit -m  //提交  <span>默认提交暂存区里的所有文件，</span>如果想<span>提交指定的文件，需要跟文件名</span><br>
+			12.git diff  //查看修改内容  <span>+表示添加的内容，-表示删除的内容</span>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var ip=document.getElementsByClassName("ip");
+	var word=document.getElementsByClassName("word");
+	for(var i=0;i<ip.length;i++){
+		ip[i].index=i;
+		ip[i].onclick=function(){
+			if(ip[this.index].style.marginLeft=="0"){
+				ip[this.index].style.margin="20px auto";
+				word[this.index].style.display="none";
+			}else{
+				ip[this.index].style.marginLeft="0";
+				word[this.index].style.display="block";
+			}
+		}
+	}
+</script>
+</html>
+<!--
+	1.创建git库
+	pashuzhuahoudewujiayi:~ lanou3g$ cd desktop  进入桌面
+	pashuzhuahoudewujiayi:desktop lanou3g$ cd git  进入新建git
+	pashuzhuahoudewujiayi:git lanou3g$ git init  初始化git库
+	pashuzhuahoudewujiayi:git lanou3g$ git config --global user.name "wujiayi"  设置git库的名字
+	pashuzhuahoudewujiayi:git lanou3g$ git config --global user.email "wujiayi6874@163.com"  设置git库的邮箱
+	pashuzhuahoudewujiayi:git lanou3g$ touch index.html  在git库中新建index.html
+	pashuzhuahoudewujiayi:git lanou3g$ git add .  添加git库下所有文件
+		  git add <file>   //添加文件
+		  git add 具体文件名 表示添加某一个具体的文件
+		  git add  *.html 表示添加后缀为.html的所有文件
+		  git add . 表示添加所有的文件
+	pashuzhuahoudewujiayi:git lanou3g$ git commit -m "text"  上传到git库
+  		  git  commit  //提交  默认提交暂存区里的所有文件，如果想提交指定的文件，需要跟文件名
+	pashuzhuahoudewujiayi:git lanou3g$ git diff   
+  		  git diff  //查看修改内容  +表示添加的内容，-表示删除的内容  
+	pashuzhuahoudewujiayi:git lanou3g$ git add .  修改后再添加
+	pashuzhuahoudewujiayi:git lanou3g$ git commit -m "text"  修改后再上传
+	
+	2.新建分支及合并
+	pashuzhuahoudewujiayi:git lanou3g$ git branch  查看当前分支
+	pashuzhuahoudewujiayi:git lanou3g$ git branch css  新建名为css的分支
+	pashuzhuahoudewujiayi:git lanou3g$ git branch  查看当前分支是否添加成功新分支
+	pashuzhuahoudewujiayi:git lanou3g$ git checkout css  切换到css分支
+	pashuzhuahoudewujiayi:git lanou3g$ cd css  进入css分支
+	pashuzhuahoudewujiayi:git lanou3g$ mkdir dir1  在css分支新建dir1文件夹
+	pashuzhuahoudewujiayi:git lanou3g$ cd dir1  进入dir1文件夹
+	pashuzhuahoudewujiayi:dir1 lanou3g$ touch test.html  在dir1文件夹新建test.html
+	pashuzhuahoudewujiayi:dir1 lanou3g$ git add .  添加dir1下所有文件
+	pashuzhuahoudewujiayi:dir1 lanou3g$ git commit -m "添加"  上传dir1下所有文件到git库
+	pashuzhuahoudewujiayi:dir1 lanou3g$ cd ../  返回dir1的上一级
+	pashuzhuahoudewujiayi:git lanou3g$ git checkout master  切换到master主线
+	pashuzhuahoudewujiayi:git lanou3g$ git merge css  合并css分支到master主线上
+	
+	3.上传GitHub 先新建一个repository，名为gittest（名字随意，最好英文）
+	pashuzhuahoudewujiayi:git lanou3g$ git remote add origin https://github.com/rhsgf/gittest.git 
+	pashuzhuahoudewujiayi:git lanou3g$ git push -u origin master
+	后刷新GitHub即可。当修改添加新内容上传到git库后，直接输入：
+	pashuzhuahoudewujiayi:git lanou3g$ git push master  上传修改后内容到GitHub
+	
+	4.通过github.io虚拟服务器上传到GitHub 先新建一个repository，名为rhsgf.github.io（GitHub名字.github.io）
+	通过GitHub Desktop程序点击Clone a Repository，复制GitHub新建页面中https://github.com/rhsgf/rhsgf.github.io.git到URL，点击Clone
+	进入点击open this repository,把名为rhsgf.github.io的文件夹拖到编辑器中，修改后，返回GitHub Desktop程序
+	在Summary处写此次修改之后的项目名字，Description处写描述（可不写），点击Commit to master
+	点击上方Push origin，后点击Fetch origin，上传成功后刷新GitHub即可
+
+
+	
+	补充内容：
+		1.ls  查看当前所在的路径 可以查看到当前目录下的所有文件及文件夹
+		2.rm -r   删除
+		3.open  打开文件或文件夹
+		4.clear  清屏
+		5.defaults write com.apple.finder AppleShowAllFiles YES
+		6.pwd  显示当前所在目录
+		7.git status  查看git库的状态，文件是否提交等
+		8.git log  查看修改记录
+		9.git reset --hard 版本号  回退版本
+		10.git add <file>   //添加文件
+		git add 具体文件名 表示添加某一个具体的文件
+		git add  *.html 表示添加后缀为.html的所有文件
+		git add . 表示添加所有的文件
+		11.git  commit  //提交  默认提交暂存区里的所有文件，如果想提交指定的文件，需要跟文件名
+		12.git diff  //查看修改内容  +表示添加的内容，-表示删除的内容
+-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
