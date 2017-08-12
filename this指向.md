@@ -88,4 +88,4 @@
 	var dog=new Dog("小狗");
 	cat.show.call(dog,"");
 	cat.show.apply(dog,[""]);  
-### 原本this指向cat，但是，因为用了call和apply的继承方法，第一个参数表示改变this的指向为dog，，因此打印出来的结果就是小狗儿不是小猫。
+### 原本this指向cat，但是，因为用了call和apply的继承方法，第一个参数表示改变this的指向为dog，，因此打印出来的结果就是小狗而不是小猫。
