@@ -57,11 +57,11 @@
 ## 六、userAgent  
 ### (1)含义：是只读字符串，声明了浏览器用于HTTP请求的用户代理头的值  
 ### (2)判断浏览器  
-&emsp;①判断火狐：** navigator.userAgent.indexOf("Firefox")!=-1 **  
+&emsp;①判断火狐：**navigator.userAgent.indexOf("Firefox")!=-1**  
 
-&emsp;②判断谷歌：** navigator.userAgent.indexOf("Chrome")!=-1 **  
+&emsp;②判断谷歌：**navigator.userAgent.indexOf("Chrome")!=-1**  
 
-&emsp;③判断Safari：** navigator.userAgent.indexOf("Safari")!=-1 **  
+&emsp;③判断Safari：**navigator.userAgent.indexOf("Safari")!=-1**  
 因为谷歌的userAgent的内容中也含有"Safari"，所以判断浏览器类型的时候必须先判断谷歌在判断Safari  
 ***  
 ## 七、window事件  
